@@ -11,17 +11,12 @@ class Video
 
     public function publish(): void
     {
-        $this->visibility = true;
+        $this->visible = true;
     }
 
     public function isPublish(): bool
     {
-        return $this->visibility;
-    }
-
-    public function getVisibility(): int
-    {
-        return $this->visibility;
+        return $this->visible;
     }
 
     public function getAgeLimit(): int
