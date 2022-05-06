@@ -6,20 +6,17 @@ use InvalidArgumentException;
 
 class Video
 {
-    private const PUBLIC = 1;
-    private const PRIVATE = 2;
-
-    private int $visibility = self::PRIVATE;
+    private bool $visible = false;
     private int $ageLimit;
 
     public function publish(): void
     {
-        $this->visibility = self::PUBLIC;
+        $this->visibility = true;
     }
 
     public function isPublish(): bool
     {
-        return $this->visibility === self::PUBLIC;
+        return $this->visibility;
     }
 
     public function getVisibility(): int
