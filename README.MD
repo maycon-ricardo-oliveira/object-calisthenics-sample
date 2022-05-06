@@ -2,8 +2,23 @@
 <br><br><p align="center"><a target="_blank"><img src="https://static.imasters.com.br/wp-content/uploads/2018/08/08114212/CASLLISSS.jpg" width="500" alt="Objects Calisthenics"></a></p><br>
 
 ### About:
-This project is for my learn about Objects Calisthenics.
+This project is for my learn about **Objects Calisthenics**.
 
+### Objective:
+My objective with this project is complete all **Objects Calisthenics** principles 
+
+#### Principles:  
+  - ☐ Use only one level of indentation per method
+  - ☐ Don’t use the else keyword
+  - ☐ Wrap all primitives and strings
+  - ☐ Use only one dot per line
+  - ☐ Don’t abbreviate
+  - ☐ Keep all entities small
+  - ☐ Don’t use any classes with more than two instance variables
+  - ☐ Use first-class collections
+  - ☐ Don’t use any getters/setters/properties
+
+[//]: # ( ✅ ☐ )
 ### Requirements:
 
 - [PHP >= 8.1](https://www.php.net/);
