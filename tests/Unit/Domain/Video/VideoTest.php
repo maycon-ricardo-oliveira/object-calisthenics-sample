@@ -3,7 +3,7 @@
 namespace Alura\Calisthenics\Tests\Unit\Domain\Video;
 
 use Alura\Calisthenics\Domain\Video\Video;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class VideoTest extends TestCase
 {
@@ -12,6 +12,6 @@ class VideoTest extends TestCase
         $video = new Video();
         $video->publish();
 
-        self::assertSame(Video::PUBLIC, $video->getVisibility());
+        self::assertTrue($video->isPublish());
     }
 }
