@@ -12,5 +12,10 @@
     "require": {
         "ext-ds": "*",
         "phpunit/phpunit": "^9"
+    },
+    "scripts": {
+        "test": [
+            "/usr/bin/php /home/mayconoliveira/php/phpunit.phar --configuration phpunit.xml"
+        ]
     }
 }
