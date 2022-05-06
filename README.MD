@@ -6,8 +6,9 @@ This project is for my learn about Objects Calisthenics.
 
 ### Requirements:
 
-- [PHP >= 7.3](https://www.php.net/);
+- [PHP >= 8.1](https://www.php.net/);
 - [Composer](https://getcomposer.org/download/);
+- [PHPUnit](https://phpunit.de/manual/6.5/en/installation.html);
 
 ### Standards:
 
@@ -20,3 +21,8 @@ This project is for my learn about Objects Calisthenics.
 After completing all requirements, you can run the following commands on your terminal:
 
 - `composer install`
+
+
+## Unit Tests
+
+To run the unit tests, execute `composer test` in the bash terminal.
