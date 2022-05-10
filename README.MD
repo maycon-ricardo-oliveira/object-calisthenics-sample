@@ -8,7 +8,7 @@ This project is for my learn about **Objects Calisthenics**.
 My objective with this project is complete all **Objects Calisthenics** principles 
 
 #### Principles:  
-  - ☐ Use only one level of indentation per method
+  - ✅ Use only one level of indentation per method
   - ☐ Don’t use the else keyword
   - ☐ Wrap all primitives and strings
   - ☐ Use only one dot per line
