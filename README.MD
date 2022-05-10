@@ -9,7 +9,7 @@ My objective with this project is complete all **Objects Calisthenics** principl
 
 #### Principles:  
   - ✅ Use only one level of indentation per method
-  - ☐ Don’t use the else keyword
+  - ✅ Don’t use the else keyword
   - ☐ Wrap all primitives and strings
   - ☐ Use only one dot per line
   - ☐ Don’t abbreviate
