@@ -4,6 +4,7 @@ namespace Alura\Calisthenics\Domain\Student;
 
 use Alura\Calisthenics\Domain\Email\Email;
 use Alura\Calisthenics\Domain\Video\Video;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Ds\Map;
 
@@ -77,8 +78,16 @@ class Student
     private function firstVideoWasWatchedInLessThan90Days(): bool
     {
         $firstDate = $this->watchedVideos->dateOfFirstVideo();
-        $today = new \DateTimeImmutable();
+        $today = new DateTimeImmutable();
 
         return $firstDate->diff($today)->days < 90;
+    }
+
+    public function age(): int
+    {
+        $today = new DateTimeImmutable();
+        $dateInterval = $this->bd->diff($today);
+
+        return $dateInterval->y;
     }
 }

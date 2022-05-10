@@ -3,10 +3,11 @@
 namespace Alura\Calisthenics\Domain\Student;
 
 use Alura\Calisthenics\Domain\Video\Video;
+use Countable;
 use DateTimeInterface;
 use Ds\Map;
 
-class WatchedVideos implements \Countable
+class WatchedVideos implements Countable
 {
     private Map $videos;
 
