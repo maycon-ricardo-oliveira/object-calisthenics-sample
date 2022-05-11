@@ -12,20 +12,18 @@ class Student
     private Email $email;
     private DateTimeInterface $birthDate;
     private WatchedVideos $watchedVideos;
-    private string $firstName;
-    private string $lastName;
     public string $street;
     public string $number;
     public string $province;
     public string $city;
     public string $state;
     public string $country;
+    private FullName $fullName;
 
     public function __construct(
         Email $email,
         DateTimeInterface $birthDate,
-        string $firstName,
-        string $lastName,
+        FullName $fullName,
         string $street,
         string $number,
         string $province,
@@ -35,19 +33,18 @@ class Student
         $this->watchedVideos = new WatchedVideos();
         $this->email = $email;
         $this->birthDate = $birthDate;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
         $this->street = $street;
         $this->number = $number;
         $this->province = $province;
         $this->city = $city;
         $this->state = $state;
         $this->country = $country;
+        $this->fullName = $fullName;
     }
 
     public function fullName(): string
     {
-        return "{$this->firstName} {$this->lastName}";
+        return (string) $this->fullName;
     }
 
     public function email(): string
