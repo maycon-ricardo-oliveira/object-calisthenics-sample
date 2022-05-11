@@ -3,6 +3,8 @@
 
 ### About:
 This project is for my learn about **Objects Calisthenics**.
+**Objects Calisthenics** are programming exercises, formalized as a set of 9 rules invented 
+by Jeff Bay in his book The ThoughtWorks Anthology.
 
 ### Objective:
 My objective with this project is complete all **Objects Calisthenics** principles 
