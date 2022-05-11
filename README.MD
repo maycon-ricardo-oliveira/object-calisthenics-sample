@@ -13,7 +13,7 @@ My objective with this project is complete all **Objects Calisthenics** principl
   - ✅ Wrap all primitives and strings
   - ✅ Use only one dot per line
   - ✅ Don’t abbreviate 
-  - ☐ Keep all entities small
+  - ✅ Keep all entities small
   - ☐ Don’t use any classes with more than two instance variables
   - ✅ Use first-class collections
   - ✅ Don’t use any getters/setters/properties
