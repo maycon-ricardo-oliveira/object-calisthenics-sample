@@ -3,9 +3,11 @@
 namespace Alura\Calisthenics\Tests\Unit\Domain\Student;
 
 use Alura\Calisthenics\Domain\Email\Email;
+use Alura\Calisthenics\Domain\Student\Address;
 use Alura\Calisthenics\Domain\Student\FullName;
 use Alura\Calisthenics\Domain\Student\Student;
 use Alura\Calisthenics\Domain\Video\Video;
+use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 
 class StudentTest extends TestCase
@@ -16,15 +18,25 @@ class StudentTest extends TestCase
     {
         $this->student = new Student(
             new Email('email@example.com'),
-            new \DateTimeImmutable('1997-10-15'),
+            new DateTimeImmutable('1997-10-15'),
             new FullName('Maycon', 'Oliveira'),
-            'Rua de Exemplo',
+            new Address('Rua de Exemplo',
             '71B',
             'Meu Bairro',
             'Minha Cidade',
             'Meu estado',
-            'Brasil'
+            'Brasil')
         );
+    }
+
+    public function testAddressMustBeRepresentedCorrectly()
+    {
+        self::assertEquals('Rua de Exemplo', $this->student->address()->street);
+        self::assertEquals('71B', $this->student->address()->number);
+        self::assertEquals('Meu Bairro', $this->student->address()->province);
+        self::assertEquals('Minha Cidade', $this->student->address()->city);
+        self::assertEquals('Meu estado', $this->student->address()->state);
+        self::assertEquals('Brasil', $this->student->address()->country);
     }
 
     public function testFullNameMustBeRepresentedAsString()
