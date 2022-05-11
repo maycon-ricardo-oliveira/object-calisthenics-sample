@@ -11,7 +11,7 @@ use Ds\Map;
 class Student
 {
     private Email $email;
-    private DateTimeInterface $bd;
+    private DateTimeInterface $birthDate;
     private WatchedVideos $watchedVideos;
     private string $fName;
     private string $lName;
@@ -24,7 +24,7 @@ class Student
 
     public function __construct(
         Email $email,
-        DateTimeInterface $bd,
+        DateTimeInterface $birthDate,
         string $fName,
         string $lName,
         string $street,
@@ -35,7 +35,7 @@ class Student
         string $country) {
         $this->watchedVideos = new WatchedVideos();
         $this->email = $email;
-        $this->bd = $bd;
+        $this->birthDate = $birthDate;
         $this->fName = $fName;
         $this->lName = $lName;
         $this->street = $street;
@@ -56,9 +56,9 @@ class Student
         return $this->email;
     }
 
-    public function getBd(): DateTimeInterface
+    public function getBirthDate(): DateTimeInterface
     {
-        return $this->bd;
+        return $this->birthDate;
     }
 
     public function watch(Video $video, DateTimeInterface $date)
@@ -86,7 +86,7 @@ class Student
     public function age(): int
     {
         $today = new DateTimeImmutable();
-        $dateInterval = $this->bd->diff($today);
+        $dateInterval = $this->birthDate->diff($today);
 
         return $dateInterval->y;
     }
